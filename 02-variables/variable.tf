@@ -40,7 +40,6 @@ output "trainer_name_details" {
 }
 
 output "course_trainer_name_details" {
-  value =
-    var.map.course
+  value =    var.map.course
 
 }
