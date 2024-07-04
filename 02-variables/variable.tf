@@ -31,17 +31,16 @@ variable "map" {
 }
 
 output "course_name_details" {
-  value = (var.map.trainer[1])
+  value = (var.map.course[1])
 }
 
 output "trainer_name_details" {
-  value = (var.map.course[1])
+  value = (var.map.trainer[1])
 
 }
 
 output "course_trainer_name_details" {
-  value = var.map
-              {
-              "course", "trainer"
-              }
+  value =
+    var.map.course
+
 }
