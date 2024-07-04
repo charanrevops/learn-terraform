@@ -31,7 +31,7 @@ variable "map" {
 }
 
 output "course_name_details" {
-  value = var.map["course","trainer]
+  value = var.map.course[1]
 
 
 }
