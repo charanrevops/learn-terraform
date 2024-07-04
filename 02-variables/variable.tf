@@ -14,5 +14,22 @@ variable "a" {
 }
 
 output "the_print_of_alist_is" {
-  value = var.a[0]
+  value = var.a
+}
+
+#accesing values
+output "the_print_of_alist_is" {
+  value = var.a[2]
+}
+
+#Map variable
+variable "map" {
+  default = {
+    course = "DevOps"
+    trainer = "john"
+  }
+}
+
+output "course_name_details" {
+  value = var.map["course"]
 }
