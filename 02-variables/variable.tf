@@ -1,7 +1,7 @@
-variable "x" {
+variable "exam" {
   default = 10
 }
 
 output "the-value-of-x-is" {
-  value = var.x
+  value = var.exam
 }
