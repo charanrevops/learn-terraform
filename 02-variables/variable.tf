@@ -18,7 +18,7 @@ output "the_print_of_alist_is" {
 }
 
 #accesing values
-output "the_print_of_alist_is" {
+output "the_print_of_a_list_vaule_is" {
   value = var.a[2]
 }
 
