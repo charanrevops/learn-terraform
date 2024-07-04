@@ -38,6 +38,6 @@ output "trainer_name_details" {
   value = (var.map.course[1])
 }
 
-output "trainer_name_details" {
+output "course_trainer_name_details" {
   value = var.map.["course","trainer"]
 }
