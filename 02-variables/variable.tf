@@ -36,9 +36,9 @@ output "course_name_details" {
 
 output "trainer_name_details" {
   value = (var.map.course[1])
-  value1 = var.map.trainer[1]
+
 }
 
-# output "course_trainer_name_details" {
-#   value = var.map.["course","trainer"]
-# }
+output "course_trainer_name_details" {
+  value = var.map["course","trainer"]
+}
