@@ -1,5 +1,5 @@
 variable "exam" {
-  default = 10
+  default = y
 }
 
 output "the-value-of-x-is----" {
