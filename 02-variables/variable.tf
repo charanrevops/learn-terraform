@@ -26,11 +26,12 @@ output "the_print_of_a_list_vaule_is" {
 variable "map" {
   default = {
     course = ["DevOps","python"]
-    trainer = "john"
+    trainer = ["surya","ram"]
   }
 }
 
 output "course_name_details" {
-  value = var.map["course"][1], var.map["trainer"]
+  value = var.map["course"[1],"trainer"[1]]
+
 
 }
