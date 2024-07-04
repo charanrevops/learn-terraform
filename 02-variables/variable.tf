@@ -14,5 +14,5 @@ variable "a" {
 }
 
 output "the_print_of_alist_is" {
-  value = "var.a"
+  value = var.a
 }
