@@ -51,3 +51,9 @@ output "trainer_name_details" {
 output "course_trainer_name_details" {
   value =    var.map.course[2]
 }
+
+variable "y"{}
+output "y_print_is" {
+  value = var.y
+}
+
