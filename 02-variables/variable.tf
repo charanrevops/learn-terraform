@@ -63,3 +63,7 @@ output "env_output_print_is" {
   value = var.env
 }
 
+variable "url" {}
+output "url_statement_is" {
+  value = var.url
+}
