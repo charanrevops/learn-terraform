@@ -24,8 +24,9 @@ output "maximum_is" {
 }
 
 
-variable "x" {}
-default="hello"
+variable "x" {
+  default = "hello"
+}
 
 locals {
   ux=upper(var.x)
