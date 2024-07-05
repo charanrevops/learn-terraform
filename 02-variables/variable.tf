@@ -63,4 +63,3 @@ output "env_output_print_is" {
   value = var.env
 }
 
-}
