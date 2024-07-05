@@ -2,7 +2,7 @@ variable "fruits" {}
 
 
 output "apple_details_is" {
-  value = "apples quanity - ${var.fruits["apple"]["quantity"]},Price is ${var.fruits["apple"]["price"]}"
+  value = "apples quanity - ${var.fruits["apple"]["quantity"]},Price is ${var.fruits["apple"]["price"][0]}"
 }
 
 output "banana_details_is" {
