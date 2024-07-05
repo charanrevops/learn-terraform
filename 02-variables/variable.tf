@@ -31,7 +31,7 @@ variable "map" {
 }
 
 output "course_name_details" {
-  value = "${var.map.course[0]-var.map.trainer[0]}"
+  value = "${var.map.course[0]}-${var.map.trainer[0]}"
   #value = "${var.map.course[1]-var.map.trainer[1]-Hello World}"
 }
 
