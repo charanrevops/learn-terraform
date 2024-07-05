@@ -10,7 +10,7 @@ variable "a" {
 
 }
 
-output "the-value-of-x-is-" {
+output "the-value-of-a-is-" {
   value = var.a
 }
 
@@ -57,3 +57,10 @@ output "y_print_is" {
   value = var.y
 }
 
+variable "env"{}
+
+output "env_output_print_is" {
+  value = var.env
+}
+
+}
