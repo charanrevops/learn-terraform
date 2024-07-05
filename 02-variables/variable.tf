@@ -32,11 +32,11 @@ variable "map" {
 
 output "course_and_trainer_name_details" {
   #value = "${var.map.course[0]}and${var.map.trainer[0]}"
-  value = "${var.map.course} is taught by ${var.map.trainer}}"
+  value = "${var.map.course[0]} is taught by ${var.map.trainer[0]}}"
 }
 
 output "trainer_name_details" {
-  value = var.map.trainer[1]
+  value = var.map.trainer
 
 }
 
