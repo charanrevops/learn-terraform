@@ -6,15 +6,23 @@ output "the-value-of-x-is----" {
   value = var.exam
 }
 
+variable "a" {
+
+}
+
+output "the-value-of-x-is----" {
+  value = var.a
+}
+
 #List variables
 
-variable "a" {
+variable "ab" {
   default=[
   10,"hello",true]
 }
 
 output "the_print_of_alist_is" {
-  value = var.a
+  value = var.ab
 }
 
 #accesing values
@@ -36,7 +44,7 @@ output "course_and_trainer_name_details" {
 }
 
 output "trainer_name_details" {
-  value = "${var.map.trainer}-${var.map.course}"
+  value = "${var.map.trainer[1]}-${var.map.course[2]}"
 
 }
 
