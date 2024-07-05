@@ -10,7 +10,7 @@ variable "a" {
 
 }
 
-output "the-value-of-x-is----" {
+output "the-value-of-x-is-" {
   value = var.a
 }
 
