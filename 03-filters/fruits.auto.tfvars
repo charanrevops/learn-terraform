@@ -4,7 +4,7 @@ fruits={
     price    = ["5","6"]
   }
   banana={
-    quantity =
+
     price    = 2.5
   }
 }
