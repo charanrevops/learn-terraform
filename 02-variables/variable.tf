@@ -26,13 +26,13 @@ output "the_print_of_a_list_value_is" {
 variable "map" {
   default = {
     course = ["DevOps","python","java"]
-    trainer = ["surya","ram"]
+    trainer = ["surya","ram","shiva"]
   }
 }
 
-output "course_name_details" {
+output "course_and_trainer_name_details" {
   #value = "${var.map.course[0]}and${var.map.trainer[0]}"
-  value = "${var.map.course[1]} is taught by ${var.map.trainer[1]}-Hello World}"
+  value = "${var.map.course[2]} is taught by ${var.map.trainer[2]}}"
 }
 
 output "trainer_name_details" {
@@ -41,6 +41,5 @@ output "trainer_name_details" {
 }
 
 output "course_trainer_name_details" {
-  value =    var.map.course
-
+  value =    var.map.course[2]
 }
