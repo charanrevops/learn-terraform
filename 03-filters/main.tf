@@ -8,3 +8,5 @@ output "apple_details_is" {
 output "banana_details_is" {
   value = "banana quanity is ${lookup(var.fruits["banana"],"quantity",100)},Price is ${lookup(var.fruits.banana,"price",0.2)}"
 }
+
+max(12, 54, 3)
