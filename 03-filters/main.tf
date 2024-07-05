@@ -9,4 +9,15 @@ output "banana_details_is" {
   value = "banana quanity is ${lookup(var.fruits["banana"],"quantity",100)},Price is ${lookup(var.fruits.banana,"price",0.2)}"
 }
 
-max(12, 54, 3)
+
+variable "number" {
+  default = [12, 54, 3, 33, 54 ,66]
+}
+
+locals {
+  mx=max(var.number....)
+}
+
+output "maximum_is" {
+  value = local.mx
+}
