@@ -12,7 +12,7 @@ output "banana_details_is" {
 
 variable "a" {
   type = list(number)
-  default = [12, 54, 3, 33, 54 ,66]
+  default = [12, 54, 3, 33, 54 ,66,100]
 }
 
 locals {
