@@ -18,7 +18,7 @@ output "the_print_of_alist_is" {
 }
 
 #accesing values
-output "the_print_of_a_list_vaule_is" {
+output "the_print_of_a_list_value_is" {
   value = var.a[2]
 }
 
@@ -31,11 +31,12 @@ variable "map" {
 }
 
 output "course_name_details" {
-  value = (var.map.course[1])
+  value = "${var.map.course[1]-var.map.trainer[1]}"
+  value = "${var.map.course[1]-var.map.trainer[1]-Hello World}"
 }
 
 output "trainer_name_details" {
-  value = (var.map.trainer[1])
+  value = var.map.trainer[1]
 
 }
 
