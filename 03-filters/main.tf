@@ -16,7 +16,7 @@ variable "a" {
 }
 
 locals {
-  mx=max(var.a)
+  mx=max(var.a...)
 }
 
 output "maximum_is" {
