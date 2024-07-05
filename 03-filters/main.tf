@@ -23,8 +23,14 @@ output "maximum_is" {
   value = local.mx
 }
 
-x=upper("hello")
 
-output "" {
-  value = x
+variable "x" {}
+default="hello"
+
+locals {
+  ux=upper(var.x)
+}
+
+output "uppercase_is" {
+  value = local.ux
 }
