@@ -36,7 +36,7 @@ output "course_and_trainer_name_details" {
 }
 
 output "trainer_name_details" {
-  value = "${var.map.trainer[0]}-${var.map.trainer}"
+  value = "${var.map["trainer"]}-${var.map["trainer"]}"
 
 }
 
