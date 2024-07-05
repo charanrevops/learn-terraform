@@ -27,7 +27,7 @@ output "the_print_of_alist_is" {
 
 #accesing values
 output "the_print_of_a_list_value_is" {
-  value = var.a[2]
+  value = var.ab[2]
 }
 
 #Map variable
