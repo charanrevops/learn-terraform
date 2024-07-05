@@ -10,12 +10,12 @@ output "banana_details_is" {
 }
 
 
-variable "number" {
+variable "a" {
   default = [12, 54, 3, 33, 54 ,66]
 }
 
 locals {
-  mx=max(var.number)
+  mx=max(var.a)
 }
 
 output "maximum_is" {
