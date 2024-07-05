@@ -22,3 +22,9 @@ locals {
 output "maximum_is" {
   value = local.mx
 }
+
+x=upper("hello")
+
+output "" {
+  value = x
+}
