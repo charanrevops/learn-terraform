@@ -105,12 +105,12 @@ output "users_with_tags" {
 variable "users1" {
   type = list(object({
     trainer = string
-    age  = number
+    course  = string
   }))
   default = [
-    { trainer = "ram", age = 30 },
-    { trainer = "prabhas", age = 25 },
-    { trainer = "ntr", age = 40 },
+    { trainer = "ram", string = "java" },
+    { trainer = "prabhas", string = "python" },
+    { trainer = "ntr", string = "ansible" },
   ]
 }
 
@@ -119,7 +119,7 @@ resource "null_resource" "users1" {
 
   triggers = {
     trainer = each.key
-    age  = each.value.age
+    age  = each.value.string
   }
 }
 
