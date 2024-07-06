@@ -20,5 +20,5 @@ resource "null_resource" "test_exam" {
 }
 
 variable "fruits" {
-  default =["apple","banana","orange","apple","banana","orange"]
+  default =["apple","banana","orange","pine","gau","sap"]
 }
