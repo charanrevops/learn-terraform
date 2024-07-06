@@ -5,7 +5,7 @@ resource "aws_instance" "ec2-severnames" {
   vpc_security_group_ids = ["sg-076b871708f2b2227"]
 
   tags = {
-    Name = var.servernames
+    Name = var.servernames[count.index]
   }
 }
 
