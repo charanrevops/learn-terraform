@@ -133,6 +133,10 @@ output "trainer-age" {
   value = { for user in null_resource.users1 : "The Trainer name is ${user.triggers.trainername}"=>"and the course name is ${user.triggers.coursename}" }
 }
 
+output "trainer-name" {
+  value = [ for user in null_resource.users1 : "The Trainer name is ${user.triggers.trainername}"]
+}
+
 
 
 
