@@ -40,8 +40,28 @@ resource "null_resource" "fruits" {
   }
 }
 
+
+
 output "user_names_output" {
   value = [for i in null_resource.fruits : "the given fruit names is ${i.triggers.dername}"]
 }
 
 
+provider "null" {}
+
+variable "user_names" {
+  type    = list(string)
+  default = ["user1", "user2", "user3"]
+}
+
+resource "null_resource" "users" {
+  for_each = toset(var.user_names)
+
+  triggers = {
+    name = each.value
+  }
+}
+
+output "user_names_output" {
+  value = [for user in null_resource.users : user.triggers.name]
+}
