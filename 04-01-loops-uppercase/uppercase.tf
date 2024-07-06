@@ -47,6 +47,7 @@ output "fruit_names_output" {
 }
 
 
+#3-user program
 provider "null" {}
 
 variable "user_names" {
