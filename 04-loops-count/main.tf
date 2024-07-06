@@ -23,12 +23,12 @@ variable "fruits" {
   default =["apple","banana","orange","pine","gau","sap"]
 }
 
-variable "exam" {
-
-  default = "y"
+resource "loop" "a1" {
+  variable "exam" {
+    default = "y"
+  }
 }
 
 output "the-value-of-y-is----" {
-  value = var.exam
-  count = length(var.fruits)
+  value = loop.a1.exam
 }
