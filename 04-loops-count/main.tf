@@ -33,7 +33,7 @@ output "the-value-of-y-is----" {
 }
 
 output "the-value-of-fruitname-is----" {
-  value = [for item in var.fruitnames :var.exam]
+  value = [for item in var.fruitnames :var.fruitnames]
 }
 
 output "the-uppercase-of-fruitnames-is----" {
