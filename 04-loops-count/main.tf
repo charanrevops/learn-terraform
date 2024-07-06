@@ -16,7 +16,7 @@
 
 
 resource "null_resource" "test_exam" {
-  count = length(var.fruits)
+  count = length(var.fruitnames)
 }
 
 variable "fruitnames" {
