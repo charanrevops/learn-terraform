@@ -25,7 +25,7 @@ variable "fruitnames" {
 
 
 output "the-value-of-fruitname-is----" {
-  value = [for item in var.fruitnames :var.fruitnames${count.index}]
+  value = [for item in var.fruitnames :var.fruitnames{count.index}]
 }
 
 # tags={
