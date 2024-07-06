@@ -27,7 +27,7 @@ variable "fruitnames" {
   default = ["apple", "banana", "orange"]
 }
 
-resource "null_resource" "fruits" {
+resource "null_fruitresource" "fruits" {
   for_each = toset(var.fruitnames)
 
   triggers = {
@@ -36,5 +36,5 @@ resource "null_resource" "fruits" {
 }
 
 output "user_names_output" {
-  value = [for user in null_resource.fruits : "the given fruit names is ${user.triggers.dername}"]
+  value = [for user in null_fruitresource.fruits : "the given fruit names is ${user.triggers.dername}"]
 }
