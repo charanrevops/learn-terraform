@@ -19,7 +19,7 @@ resource "null_resource" "test_exam" {
   count = length(var.fruits)
 }
 
-variable "fruits" {
+variable "fruitnames" {
   default =["apple","banana","orange","pine","gau","sap"]
 }
 
@@ -29,9 +29,17 @@ variable "exam" {
 
 
 output "the-value-of-y-is----" {
-  value = [for item in var.fruits :var.exam]
+  value = [for item in var.fruitnames :var.exam]
 }
 
-output "the-value-of-fruits-is----" {
-  value = [for item in var.fruits :upper(fruits)]
+
+
+variable"names"{
+  description="A sample list of names"
+  type=list(string)
+  default = ["apple","mango","orange"]
+}
+
+output "the-uppercase-of-fruits-is----" {
+  value = [for item in var.names :upper(fruits)]
 }
