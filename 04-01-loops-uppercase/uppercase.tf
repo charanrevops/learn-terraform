@@ -108,9 +108,9 @@ variable "users1" {
     course  = string
   }))
   default = [
-    { trainer = "ram", string = "java" },
-    { trainer = "prabhas", string = "python" },
-    { trainer = "ntr", string = "ansible" },
+    { trainer = "ram", course = "java" },
+    { trainer = "prabhas", course = "python" },
+    { trainer = "ntr", course = "ansible" },
   ]
 }
 
@@ -119,7 +119,7 @@ resource "null_resource" "users1" {
 
   triggers = {
     trainer = each.key
-    age  = each.value.string
+    age  = each.value.course
   }
 }
 
