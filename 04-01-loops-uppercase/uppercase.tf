@@ -20,7 +20,7 @@ output "the-given-name-of-fruits-is----" {
 }
 
 
-provider "null" {}
+#provider "null" {}
 
 variable "user_names" {
   type    = list(string)
