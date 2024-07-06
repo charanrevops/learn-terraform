@@ -119,7 +119,7 @@ resource "null_resource" "users1" {
 
   triggers = {
     trainer = each.key
-    age  = each.value.course
+    age  = each.key
   }
 }
 
