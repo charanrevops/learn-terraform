@@ -24,10 +24,11 @@ variable "fruits" {
 }
 
 variable "exam" {
+  count = length(var.fruits)
   default = "y"
 }
 
 output "the-value-of-y-is----" {
-  count = length(var.fruits)
+
   value = var.exam
 }
