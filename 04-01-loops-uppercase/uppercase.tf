@@ -15,6 +15,6 @@ variable"names"{
   count=length(var.names)
 }
 
-output "the-uppercase-of-fruits-is----" {
+output "the-given-name-of-fruits-is----" {
   value = var.names
 }
