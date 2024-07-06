@@ -130,7 +130,7 @@ output "trainer-course" {
 }
 
 output "trainer-age" {
-  value = { for user in null_resource.users1 : user.triggers.trainername => user.triggers.coursename}
+  value = { for user in null_resource.users1 : "The Trainer name is ${user.triggers.trainername}" => user.triggers.coursename}
 }
 
 
