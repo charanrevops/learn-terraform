@@ -48,7 +48,7 @@ output "fruit_names_output" {
 
 
 #3-user program
-provider "null" {}
+#provider "null" {}
 
 variable "user_names" {
   type    = list(string)
