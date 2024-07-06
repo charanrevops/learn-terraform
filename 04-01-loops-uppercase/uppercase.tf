@@ -108,9 +108,9 @@ variable "users1" {
     age  = number
   }))
   default = [
-    { name = "user1", age = 30 },
-    { name = "user2", age = 25 },
-    { name = "user3", age = 40 },
+    { name = "ram", age = 30 },
+    { name = "prabhas", age = 25 },
+    { name = "ntr", age = 40 },
   ]
 }
 
