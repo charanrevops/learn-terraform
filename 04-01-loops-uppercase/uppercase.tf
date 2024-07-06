@@ -70,7 +70,7 @@ output "user_names_output" {
 
 #4-program
 
-provider "null" {}
+#provider "null" {}
 
 variable "users" {
   type = list(object({
