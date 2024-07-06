@@ -20,7 +20,7 @@ resource "null_resource" "test_exam" {
 }
 
 variable "fruitnames" {
-  default =["apple","banana","orange","pine","gau","sap"]
+  default =["apple","banana","orange","pine","gau","sap","mango"]
 }
 
 variable "exam" {
@@ -40,7 +40,7 @@ output "the-uppercase-of-fruitnames-is----" {
 variable"names"{
   description="A sample list of names"
   type=list(string)
-  default = ["apple","mango","orange"]
+  default = ["apple","mango","orange","pinacolada"]
 }
 
 output "the-uppercase-of-fruits-is----" {
