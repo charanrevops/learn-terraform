@@ -16,5 +16,9 @@
 
 
 resource "null_resource" "test_exam" {
-  count = 3
+  count = length(var.fruits)
+}
+
+variable "fruits" {
+  default =["apple","banana","orange"]
 }
