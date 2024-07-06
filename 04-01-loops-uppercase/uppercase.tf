@@ -106,11 +106,12 @@ variable "users1" {
   type = list(object({
     trainer = string
     course  = string
+    age     = number
   }))
   default = [
-    { trainer = "ram", course = "java" },
-    { trainer = "prabhas", course = "python" },
-    { trainer = "ntr", course = "ansible" },
+    { trainer = "ram", course = "java" ,age=30},
+    { trainer = "prabhas", course = "python",age=40 },
+    { trainer = "ntr", course = "ansible" ,age=50 },
   ]
 }
 
