@@ -21,6 +21,7 @@
 
 variable "fruitnames" {
   default =["apple","banana","orange","pine","gau","sap","mango","sup","tomato"]
+  count= length(var.fruitnames)
 }
 
 

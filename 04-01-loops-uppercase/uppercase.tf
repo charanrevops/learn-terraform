@@ -5,5 +5,5 @@ variable"names"{
 }
 
 output "the-uppercase-of-fruits-is----" {
-  value = [for item in var.names :upper(item)]
+  value = [for item in var.names:upper(item)]
 }
