@@ -12,6 +12,7 @@ variable"names"{
   description="A sample list of names"
   type=list(string)
   default = ["apple","mango","orange","pinacolada"]
+  count=length(var.names)
 }
 
 output "the-uppercase-of-fruits-is----" {
