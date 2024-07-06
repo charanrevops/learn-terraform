@@ -84,7 +84,7 @@ variable "users" {
   ]
 }
 
-resource "null_resource1" "users" {
+resource "null_resource" "usersage" {
   for_each = { for u in var.users : u.name => u }
 
   triggers = {
@@ -94,5 +94,5 @@ resource "null_resource1" "users" {
 }
 
 output "users_with_tags" {
-  value = { for user in null_resource1.users : user.triggers.name => user.triggers.age }
+  value = { for user in null_resource.usersage : user.triggers.name => user.triggers.age }
 }
