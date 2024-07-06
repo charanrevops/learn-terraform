@@ -12,7 +12,7 @@ variable"names"{
   description="A sample list of names"
   type=list(string)
   default = ["apple","mango","orange","pinacolada"]
-  #count=length(var.names)
+  count=length(var.names)
 }
 
 output "the-given-name-of-fruits-is----" {
