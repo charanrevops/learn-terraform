@@ -16,5 +16,5 @@ variable"names" {
 
 
 output "the-given-name-of-fruits-is----" {
-  value = [for item in var.names:"the given fruit names is ${var.names[names]}"]
+  value = [for item in var.names:"the given fruit names is ${var.names[0]}"]
 }
