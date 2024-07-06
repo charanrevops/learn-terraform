@@ -41,5 +41,5 @@ variable"names"{
 }
 
 output "the-uppercase-of-fruits-is----" {
-  value = [for item in var.names :upper(fruits)]
+  value = [for item in var.names :upper(name)]
 }
