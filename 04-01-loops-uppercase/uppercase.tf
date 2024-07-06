@@ -42,7 +42,7 @@ resource "null_resource" "fruits" {
 
 
 
-output "user_names_output" {
+output "fruit_names_output" {
   value = [for i in null_resource.fruits : "the given fruit names is ${i.triggers.dername}"]
 }
 
