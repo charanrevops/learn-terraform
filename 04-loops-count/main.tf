@@ -28,5 +28,6 @@ variable "exam" {
 }
 
 output "the-value-of-y-is----" {
+  count = length(var.fruits)
   value = var.exam
 }
