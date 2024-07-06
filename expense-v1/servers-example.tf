@@ -22,6 +22,6 @@ resource "aws_instance" "mysqlexm" {
   instance_type = "t3.small"
   vpc_security_group_ids = ["sg-076b871708f2b2227"]
   tags = {
-    Name = "mysql"
+    Name = "mysqltag"
   }
 }
