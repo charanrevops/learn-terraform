@@ -8,18 +8,12 @@
 #   value = [for item in var.names:upper(item)]
 # }
 
-variable"names"{
-  count=length(var.names)
-  description="A sample list of names"
-  type=list(string)
-  default = ["apple","banana","orange","pinacolada"]
-
-
-  tags = {
-    Name = var.names[count.index]
-  }
-  #count=length(var.names)
+variable"names" {
+  description = "A sample list of names"
+  type        = list(string)
+  default     = ["apple", "banana", "orange", "pinacolada"]
 }
+
 
 output "the-given-name-of-fruits-is----" {
   value = [for item in var.names:"the given fruit names is ${var.names}"]
