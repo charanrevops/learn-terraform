@@ -100,29 +100,29 @@ output "users_with_tags" {
 
 #-Program Trainer and course name
 
-provider "null" {}
+#provider "null" {}
 
 variable "users1" {
   type = list(object({
-    name = string
+    trainer = string
     age  = number
   }))
   default = [
-    { name = "ram", age = 30 },
-    { name = "prabhas", age = 25 },
-    { name = "ntr", age = 40 },
+    { trainer = "ram", age = 30 },
+    { trainer = "prabhas", age = 25 },
+    { trainer = "ntr", age = 40 },
   ]
 }
 
 resource "null_resource" "users1" {
-  for_each = { for u in var.users1: u.name => u }
+  for_each = { for u in var.users1: u.trainer => u }
 
   triggers = {
-    name = each.key
+    trainer = each.key
     age  = each.value.age
   }
 }
 
 output "trainer-course" {
-  value = { for user in null_resource.users1 : user.triggers.name => user.triggers.age }
+  value = { for user in null_resource.users1 : user.triggers.trainer => user.triggers.age }
 }
