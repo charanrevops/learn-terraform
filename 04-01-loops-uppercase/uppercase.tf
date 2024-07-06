@@ -36,5 +36,5 @@ resource "null_resource" "users" {
 }
 
 output "user_names_output" {
-  value = [for user in null_resource.users : user.triggers.name]
+  value = [for user in null_resource.users : "${user.triggers.name}"]
 }
