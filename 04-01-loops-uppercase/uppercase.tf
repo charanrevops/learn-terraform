@@ -126,3 +126,4 @@ resource "null_resource" "users1" {
 output "trainer-course" {
   value = { for user in null_resource.users1 : user.triggers.trainer => user.triggers.age }
 }
+
