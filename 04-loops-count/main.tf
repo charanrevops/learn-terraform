@@ -22,3 +22,11 @@ resource "null_resource" "test_exam" {
 variable "fruits" {
   default =["apple","banana","orange","pine","gau","sap"]
 }
+
+variable "exam" {
+  default = "y"
+}
+
+output "the-value-of-y-is----" {
+  value = var.exam
+}
