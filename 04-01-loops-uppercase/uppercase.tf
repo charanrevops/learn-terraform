@@ -109,9 +109,9 @@ variable "users1" {
     age     = number
   }))
   default = [
-    { trainer = "ram", course = "java" ,age=30},
-    { trainer = "prabhas", course = "python",age=40 },
-    { trainer = "ntr", course = "ansible" ,age=50 },
+    { trainer = "ram", course = "java" ,      age = 30},
+    { trainer = "prabhas", course = "python", age = 40 },
+    { trainer = "ntr", course = "ansible" ,   age = 50 },
   ]
 }
 
@@ -121,10 +121,11 @@ resource "null_resource" "users1" {
   triggers = {
     trainername = each.key
     coursename  = each.value.course
+    age         = each.value.age
   }
 }
 
 output "trainer-course" {
-  value = { for user in null_resource.users1 : user.triggers.trainername => user.triggers.coursename }
+  value = { for user in null_resource.users1 : user.triggers.trainername => user.triggers.age }
 }
 
