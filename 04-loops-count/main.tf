@@ -15,13 +15,12 @@
 # }
 
 
-resource "null_resource" "test_exam" {
-  count = length(var.fruitnames)
-}
+# resource "null_resource" "test_exam" {
+#   count = length(var.fruitnames)
+# }
 
 variable "fruitnames" {
   default =["apple","banana","orange","pine","gau","sap","mango"]
-
 }
 
 
