@@ -9,9 +9,12 @@
 # }
 
 variable"names"{
+  count=length(var.names)
   description="A sample list of names"
   type=list(string)
   default = ["apple","banana","orange","pinacolada"]
+
+
   tags = {
     Name = var.names[count.index]
   }
