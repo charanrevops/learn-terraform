@@ -96,3 +96,33 @@ resource "null_resource" "usersage" {
 output "users_with_tags" {
   value = { for user in null_resource.usersage : user.triggers.name => user.triggers.age }
 }
+
+
+#-Program Trainer and course name
+
+variable "users" {
+  type = list(object({
+    trainer = string
+    age  = number
+  }))
+
+
+  default = [
+    { trainer = "user1", age = 30 },
+    { trainer = "user2", age = 25 },
+    { trainer = "user3", age = 40 },
+  ]
+}
+
+resource "null_resource" "usersage" {
+  for_each = { for u in var.users : u.trainer => u }
+
+  triggers = {
+    trainer = each.key
+    age  = each.value.age
+  }
+}
+
+output "users_with_tags" {
+  value = { for user in null_resource.usersage : user.triggers.trainer => user.triggers.age }
+}
