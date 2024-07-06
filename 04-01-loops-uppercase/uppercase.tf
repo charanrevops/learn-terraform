@@ -126,6 +126,11 @@ resource "null_resource" "users1" {
 }
 
 output "trainer-course" {
-  value = { for user in null_resource.users1 : user.triggers.trainername => user.triggers.age }
+  value = { for user in null_resource.users1 : user.triggers.trainername => user.triggers.age}
 }
+
+output "trainer-age" {
+  value = { for user in null_resource.users1 : user.triggers.trainername => user.triggers.coursename}
+}
+
 
