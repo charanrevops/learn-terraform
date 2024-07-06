@@ -31,3 +31,7 @@ variable "exam" {
 output "the-value-of-y-is----" {
   value = [for item in var.fruits :var.exam]
 }
+
+output "the-value-of-fruits-is----" {
+  value = [for item in var.fruits :upper(fruits)]
+}
