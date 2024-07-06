@@ -118,12 +118,12 @@ resource "null_resource" "users1" {
   for_each = { for u in var.users1: u.trainer => u }
 
   triggers = {
-    trainer = each.key
-    age  = each.value.course
+    trainername = each.key
+    coursename  = each.value.course
   }
 }
 
 output "trainer-course" {
-  value = { for user in null_resource.users1 : user.triggers.trainer => user.triggers.age }
+  value = { for user in null_resource.users1 : user.triggers.trainername => user.triggers.coursename }
 }
 
