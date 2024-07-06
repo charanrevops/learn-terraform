@@ -22,19 +22,19 @@ output "the-given-name-of-fruits-is----" {
 
 #provider "null" {}
 
-variable "user_names" {
+variable "fruit_names" {
   type    = list(string)
-  default = ["user1", "user2", "user3"]
+  default = ["apple", "banana", "orange"]
 }
 
 resource "null_resource" "users" {
-  for_each = toset(var.user_names)
+  for_each = toset(var.fruit_names)
 
   triggers = {
-    name = each.value
+    dername = each.value
   }
 }
 
 output "user_names_output" {
-  value = [for user in null_resource.users : "the given fruit names is ${user.triggers.name}"]
+  value = [for user in null_resource.users : "the given fruit names is ${user.triggers.dername}"]
 }
