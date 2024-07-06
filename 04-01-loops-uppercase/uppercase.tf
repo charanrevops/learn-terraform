@@ -109,9 +109,9 @@ variable "users1" {
     age     = number
   }))
   default = [
-    { trainer = "ram", course = "java" ,      age = 30},
-    { trainer = "prabhas", course = "python", age = 40 },
-    { trainer = "ntr", course = "ansible" ,   age = 50 },
+    { trainer : "ram", course = "java" ,      age = 30},
+    { trainer : "prabhas", course = "python", age = 40 },
+    { trainer : "ntr", course = "ansible" ,   age = 50 },
   ]
 }
 
@@ -134,7 +134,7 @@ output "trainer-age" {
 }
 
 output "trainer-name" {
-  value = { for i,w in null_resource.users1 : "${i}" => "The Trainer age is ${w.triggers.age}"  if i !="prabhas"}
+  value = { for i,w in null_resource.users1 : "${i}" => "The Trainer age is ${w.triggers.age}"  if i !="ntr"}
 }
 
 
