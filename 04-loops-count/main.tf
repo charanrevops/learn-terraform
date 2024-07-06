@@ -32,6 +32,9 @@ output "the-value-of-y-is----" {
   value = [for item in var.fruitnames :var.exam]
 }
 
+output "the-uppercase-of-fruitnames-is----" {
+  value = [for name in var.fruitnames :upper(name)]
+}
 
 
 variable"names"{
