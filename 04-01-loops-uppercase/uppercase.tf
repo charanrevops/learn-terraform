@@ -134,7 +134,7 @@ output "trainer-age" {
 }
 
 output "trainer-name" {
-  value = { for i,w in null_resource.users1 : "${i}" => "The Trainer name is ${w.triggers.coursename}"  if i !="ram"}
+  value = { for i,w in null_resource.users1 : "${i}" => "The Trainer age is ${w.triggers.age}"  if i !="ram"}
 }
 
 
