@@ -25,7 +25,7 @@ variable"names" {
 
 
 output "the-given-name-of-fruits-is----" {
-  value = [for item in var.names:"the given fruit names is" user.trigger.name]
+  value = [for item in var.names:"the given fruit names is" item.trigger.name]
 }
 
 # provider "null" {}
