@@ -23,12 +23,11 @@ variable "fruits" {
   default =["apple","banana","orange","pine","gau","sap"]
 }
 
-resource "loop" "a1" {
-  variable "exam" {
+variable "exam" {
     default = "y"
   }
-}
+
 
 output "the-value-of-y-is----" {
-  value = loop.a1.exam
+  value = [for item in var.fruits :var.exam]
 }
