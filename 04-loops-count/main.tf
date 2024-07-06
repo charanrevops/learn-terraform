@@ -20,7 +20,7 @@
 # }
 
 variable "fruitnames" {
-  default =["apple","banana","orange","pine","gau","sap","mango"]
+  default =["apple","banana","orange","pine","gau","sap","mango","sup"]
 }
 
 
