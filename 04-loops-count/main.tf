@@ -21,28 +21,32 @@ resource "null_resource" "test_exam" {
 
 variable "fruitnames" {
   default =["apple","banana","orange","pine","gau","sap","mango"]
-  tags={
-    Name=var.fruitnames[count.index]
-  }
 
 }
 
-
-variable "exam" {
-    default = "y"
-  }
-
-
-output "the-value-of-y-is----" {
-  value = [for item in var.fruitnames :var.exam]
-}
 
 output "the-value-of-fruitname-is----" {
   value = [for item in var.fruitnames :var.fruitnames]
 }
 
-output "the-uppercase-of-fruitnames-is----" {
-  value = [for name in var.fruitnames :upper(name)]
-}
+# tags={
+#   Name=var.fruitnames[count.index]
+# }
+#
+
+
+# variable "exam" {
+#   default = "y"
+# }
+#
+#
+# output "the-value-of-y-is----" {
+#   value = [for item in var.fruitnames :var.exam]
+# }
+
+
+# output "the-uppercase-of-fruitnames-is----" {
+#   value = [for name in var.fruitnames :upper(name)]
+# }
 
 
