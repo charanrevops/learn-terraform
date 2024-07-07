@@ -12,11 +12,11 @@
 
 #02-program
 variable "marks" {
-  #type=list(string)
-  default = "banana"
+  type=list(string)
+  default = ["apple","banana"]
 }
 
 output "grade" {
-  value = var.marks == "apple" ? "You have guessed it " : "No you are wrong"
+  value = var.marks[0] == "apple" ? "You have guessed it " : "No you are wrong"
 }
 
