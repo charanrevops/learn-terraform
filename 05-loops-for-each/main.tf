@@ -17,10 +17,10 @@ resource "null_resource" "test" {
 variable "fruitnames" {
   #type    = list(string)
   default = {
-    apple ={}
-    banana={}
-    orange={}
-    ananas={}
+    apple = "apple"
+    banana= "banana"
+    orange= "orange"
+    ananas= "ananas"
   }
 }
 
