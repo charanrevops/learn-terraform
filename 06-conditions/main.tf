@@ -13,10 +13,10 @@
 #02-program
 variable "marks" {
   #type=list(string)
-  default = "apple"
+  default = "banana"
 }
 
 output "grade" {
-  value = var.marks == "apple" ? "You have guess it " : "No you are wrong"
+  value = var.marks == "apple" ? "You have guessed it " : "No you are wrong"
 }
 
