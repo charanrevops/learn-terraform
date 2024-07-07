@@ -12,10 +12,11 @@
 
 #02-program
 variable "marks" {
-  default = 50
+  #type=list(string)
+  default = "apple"
 }
 
 output "grade" {
-  value = var.marks >=80 ? "You have guess it " : "No you are wrong"
+  value = var.marks == "apple" ? "You have guess it " : "No you are wrong"
 }
 
