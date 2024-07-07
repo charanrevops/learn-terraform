@@ -11,5 +11,4 @@ resource "aws_instance" "ec2-severnames" {
 
 variable "servernames" {
   default = ["frontendserver", "backendserver", "mysqlserver"]
-
 }
