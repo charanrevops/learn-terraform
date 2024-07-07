@@ -1,13 +1,13 @@
 #01-program
-variable "marks" {
+variable "rank" {
   default = 50
 }
 
-output "grade" {
-  value = var.marks >=80 ? "Distinction" : "2nd-class"
+output "ranker" {
+  value = var.rank >=80 ? "Distinction" : "2nd-class"
 }
 
-syntax: condition ? true_statement : false_statement
+#syntax: condition ? true_statement : false_statement
 
 
 #02-program
