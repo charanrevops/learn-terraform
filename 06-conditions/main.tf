@@ -1,4 +1,4 @@
-# #02-program
+# #01-program
 # variable "marks" {
 #   default = 50
 # }
@@ -11,13 +11,11 @@
 
 
 #02-program
-variable"names" {
-  description = "A sample list of names"
-  #type        = list(string)
-  default     = 80
+variable "marks" {
+  default = 50
 }
 
-
-output "the-given-name-of-fruits-is----" {
-  value = var.names > 80? "you have guessed it":"you are wrong"
+output "grade" {
+  value = var.marks >=80 ? "You have guess it " : "No you are wrong"
 }
+
