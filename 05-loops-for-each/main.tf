@@ -29,7 +29,7 @@ resource "null_resource" "fruits" {
   for_each = var.fruits
 
   triggers = {
-    dername = each.value["fruitsnames"]
+    dername = each.value["fruitnames"]
   }
 }
 
