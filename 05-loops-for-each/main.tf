@@ -17,16 +17,29 @@ resource "null_resource" "test" {
 variable "fruitnames" {
   #type    = list(string)
   default = {
-    apple = "apple"
-    banana= "banana"
-    orange= "orange"
-    ananas= "ananas"
+    apple = {
+      name1 = "apple"
+    }
+    banana = {
+      name1 = "banana"
+    }
+    orange = {
+      name1 = "orange"
+    }
+    ananas = {
+      name1 = "ananas"
+    }
   }
 }
 
 resource "null_resource" "fruits" {
   #for_each = toset(var.fruitnames)
   for_each = var.fruits
+  name1    = each.value["name1"]
+
+  tags = {
+    Name=each.key
+  }
 
   triggers = {
     dername = each.value["fruitnames"]
