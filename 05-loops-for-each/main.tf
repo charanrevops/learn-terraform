@@ -1,3 +1,4 @@
+# 01-program
 variable "fruits" {
   default = {
     apple ={}
@@ -11,6 +12,8 @@ resource "null_resource" "test" {
   for_each = var.fruits
 }
 
+
+# 02-program
 variable "fruitnames" {
   type    = list(string)
   default = ["apple", "banana", "orange", "ananas"]
