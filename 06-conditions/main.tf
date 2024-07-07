@@ -17,7 +17,7 @@ variable "marks" {
 }
 
 output "grade" {
-  value = try(var.marks[1] == "banana",null) =="null" ? "You have guessed it " : "No you are wrong"
+  value = try(var.marks[1] == "banana") =="null" ? "You have guessed it " : "No you are wrong"
 }
 
 #"apple","banana"
