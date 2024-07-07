@@ -19,5 +19,5 @@ variable"names" {
 
 
 output "the-given-name-of-fruits-is----" {
-  value = [for item in var.names:"the given fruit names is ${var.names[0]}"]
+  value = [try(for item in var.names:"the given fruit names is ${var.names[0]}=="apple"")?"you have guessed it":"you are wrong"]
 }
