@@ -13,7 +13,7 @@
 #02-program
 variable"names" {
   description = "A sample list of names"
-  type        = list(string)
+  #type        = list(string)
   default     = 80
 }
 
