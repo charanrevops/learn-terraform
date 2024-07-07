@@ -14,10 +14,10 @@ output "grade" {
 variable"names" {
   description = "A sample list of names"
   type        = list(string)
-  default     = ["apple", "banana", "orange", "pinacolada"]
+  default     = ["apple"]
 }
 
 
 output "the-given-name-of-fruits-is----" {
-  value = [try(for item in var.names:"the given fruit names is ${var.names[0]}=="apple"")?"you have guessed it":"you are wrong"]
+  value = var.names=="apple"")?"you have guessed it":"you are wrong"]
 }
