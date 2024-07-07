@@ -25,7 +25,7 @@ variable "fruitnames" {
 }
 
 resource "null_resource" "fruits" {
-  for_each = toset(var.fruitnames)
+  #for_each = toset(var.fruitnames)
   for_each = var.fruits
 
   triggers = {
