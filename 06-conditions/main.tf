@@ -13,11 +13,11 @@ output "ranker" {
 #02-program
 variable "marks" {
   type=list(string)
-  default = ["apple","banana"]
+  default = ["apple","banana",""]
 }
 
 output "grade" {
-  value = try(var.marks[3] == "banana",null)  ? "You have guessed it TRUE" : "No you are wrong FALSE"
+  value = try(var.marks[3] == "banana",null)  ? "You have guessed it TRUE${var.marks[0]}" : "No you are wrong FALSE${var.marks[1]}"
 }
 
 #"apple","banana"
