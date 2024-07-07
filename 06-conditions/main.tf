@@ -1,3 +1,4 @@
+#02-program
 variable "marks" {
   default = 50
 }
@@ -7,3 +8,16 @@ output "grade" {
 }
 
 # syntax: condition ? true_statement : false_statement
+
+
+#02-program
+variable"names" {
+  description = "A sample list of names"
+  type        = list(string)
+  default     = ["apple", "banana", "orange", "pinacolada"]
+}
+
+
+output "the-given-name-of-fruits-is----" {
+  value = [for item in var.names:"the given fruit names is ${var.names[0]}"]
+}
