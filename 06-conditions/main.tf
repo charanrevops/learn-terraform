@@ -1,13 +1,13 @@
-# #01-program
-# variable "marks" {
-#   default = 50
-# }
-#
-# output "grade" {
-#   value = var.marks >=80 ? "Distinction" : "2nd-class"
-# }
+#01-program
+variable "marks" {
+  default = 50
+}
 
-# syntax: condition ? true_statement : false_statement
+output "grade" {
+  value = var.marks >=80 ? "Distinction" : "2nd-class"
+}
+
+syntax: condition ? true_statement : false_statement
 
 
 #02-program
