@@ -1,11 +1,11 @@
-#02-program
-variable "marks" {
-  default = 50
-}
-
-output "grade" {
-  value = var.marks >=80 ? "Distinction" : "2nd-class"
-}
+# #02-program
+# variable "marks" {
+#   default = 50
+# }
+#
+# output "grade" {
+#   value = var.marks >=80 ? "Distinction" : "2nd-class"
+# }
 
 # syntax: condition ? true_statement : false_statement
 
@@ -14,10 +14,10 @@ output "grade" {
 variable"names" {
   description = "A sample list of names"
   type        = list(string)
-  default     = ["apple"]
+  default     = 80
 }
 
 
 output "the-given-name-of-fruits-is----" {
-  value = var.names =="apple"? "you have guessed it":"you are wrong"]
+  value = var.names > 80? "you have guessed it":"you are wrong"]
 }
