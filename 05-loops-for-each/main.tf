@@ -15,12 +15,18 @@ resource "null_resource" "test" {
 
 # 02-program
 variable "fruitnames" {
-  type    = list(string)
-  default = ["apple", "banana", "orange", "ananas"]
+  #type    = list(string)
+  default = {
+    apple ={}
+    banana={}
+    orange={}
+    ananas={}
+  }
 }
 
 resource "null_resource" "fruits" {
   for_each = toset(var.fruitnames)
+  for_each = var.fruits
 
   triggers = {
     dername = each.value
