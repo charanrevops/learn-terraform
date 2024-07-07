@@ -1,6 +1,6 @@
 #01-program
 variable "rank" {
-  default = 90
+  default = 50
 }
 
 output "ranker" {
