@@ -13,7 +13,7 @@ output "ranker" {
 #02-program
 variable "marks" {
   type=list(string)
-  default = []
+  default = ["apple","banana"]
 }
 
 output "grade" {
