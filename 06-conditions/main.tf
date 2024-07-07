@@ -19,5 +19,5 @@ variable"names" {
 
 
 output "the-given-name-of-fruits-is----" {
-  value = var.names=="apple"")?"you have guessed it":"you are wrong"]
+  value = var.names=="apple"? "you have guessed it":"you are wrong"]
 }
