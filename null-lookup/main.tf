@@ -28,7 +28,7 @@ variable "servernames" {
 
 
 output "names-ids" {
-  value = [for i in null_resource.ec2-servernames : "the given servername is ${var.servernames[0]}"]
+  value = [for i in null_resource.ec2-servernames : "the given servername is ${var.servernames["instance_type"]}"]
 }
 
 
