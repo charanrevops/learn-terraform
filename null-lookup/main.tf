@@ -1,6 +1,6 @@
 resource "null_resource" "ec2-severnames" {
   #count         =  length(var.servernames)
-  for_each      = toset(var.servernames)
+  #for_each      = toset(var.servernames)
   triggers = {
     names = each.value
   }
