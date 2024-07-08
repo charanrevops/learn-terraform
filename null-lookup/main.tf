@@ -12,18 +12,25 @@ resource "null_resource" "ec2-severnames" {
 }
 
 variable "servernames" {
-  type = list(object({}))
-  default = {
-    frontendserver = {
+  type = list(object({
+    name= string
+    id= string
+  }))
+  default = [
+    {name = "frontendserver"
+      id  = ""
+    },
+    {
+      name = "backendserver"
+      id  = ""
+    },
+    {
+      name = "mysqlserver"
+      id = "t2.micro"
+    }
 
     }
-    backendserver = {
-
-    }
-    mysqlserver = {
-      instance_type = "t2.micro"
-    }
-  }
+  ]
 }
 
 
@@ -58,3 +65,4 @@ resource "null_resource" "fruits" {
 output "fruit_names_output" {
   value = [for i in null_resource.fruits : "the given fruit names is ${i.triggers.dername}"]
 }
+
