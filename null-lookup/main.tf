@@ -15,6 +15,7 @@ variable "servernames" {
   type = list(object({
     name= string
     id= string
+    age= string
   }))
   default = [
     {
