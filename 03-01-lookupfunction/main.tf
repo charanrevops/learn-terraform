@@ -1,8 +1,8 @@
 variable "fruits" {
   default = {
-    "name1"="apple"
-    "name2"="banana"
-    "name3"="orange"
+    name1=10
+    name2=20
+    name3=30
   }
 }
 
