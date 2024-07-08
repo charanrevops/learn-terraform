@@ -1,6 +1,6 @@
 resource "null_resource" "ec2-servernames" {
   #count         =  length(var.servernames)
-  for_each      = var.servernames
+  # for_each      = var.servernames
   # ami           = "ami-041e2ea9402c46c32"
   # instance_type = try(each.value["instance_type"], null) == null? "t3.small" : each.value["instance_type"]
   # instance_type = lookup(var.servernames[each.key],"instance_type","t3.small")
