@@ -7,6 +7,6 @@ variable "fruits" {
 }
 
 output "the-fruit-name-is" {
-  value = var.fruits["name2"]
+  value = var.fruits["name4"]
 }
 
