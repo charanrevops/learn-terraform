@@ -21,14 +21,17 @@ variable "servernames" {
     {
       name = "frontendserver"
       id  = ""
+      age= "30"
     },
     {
       name = "backendserver"
       id  = ""
+      age= "33"
     },
     {
       name = "mysqlserver"
       id = "t2.micro"
+      age= "39"
     }
 
   ]
