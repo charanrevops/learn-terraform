@@ -1,15 +1,15 @@
 variable "fruits" {
   default = {
-    name1="apple"
-    name2="banana"
-    name3="orange"
+    "name1"="apple"
+    "name2"="banana"
+    "name3"="orange"
   }
 }
 
 
 variable "fruits" {
   default = {
-    type=string
+    type = string
 
   }
 }
