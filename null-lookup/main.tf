@@ -27,7 +27,7 @@ variable "servernames" {
 
 
 output "example" {
-  value = "this is example"
+  value = "this is example${lookup(each.value,"instance_type","t3.small")}"
 }
 
 # instance_type = try(each.value["instance_type"], null) == null? "t3.small" : each.value["instance_type"]
