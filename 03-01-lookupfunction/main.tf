@@ -1,6 +1,6 @@
 variable "fruits" {
-  default = {
-    name1=10
+  default ={
+    name1 =10
     name2=20
     name3=30
   }
@@ -8,10 +8,10 @@ variable "fruits" {
 
 
 variable "fruits" {
-  default = {
+
     type = string
 
-  }
+
 }
 output "the-fruit-name-is" {
   #value = lookup(var.fruits["name4"],"please say correct name")
