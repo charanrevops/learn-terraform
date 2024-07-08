@@ -27,7 +27,9 @@ variable "servernames" {
 }
 
 
-
+output "names-ids" {
+  value = [for i in null_resource.ec2-servernames : "the given fruit names is "]
+}
 
 
 # 02-program
