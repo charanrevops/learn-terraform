@@ -9,12 +9,12 @@ variable "fruits" {
 
 variable "fruits" {
   default = {
-    name=string
+    type=string
 
   }
 }
 output "the-fruit-name-is" {
   #value = lookup(var.fruits["name4"],"please say correct name")
-  value = lookup(var.fruits,"name","please say correct name")
+  value = lookup(var.fruits,"${var.fruits}","please say correct name")
 }
 
