@@ -2,9 +2,9 @@ resource "null_resource" "ec2-severnames" {
   #count         =  length(var.servernames)
   for_each      = var.servernames
 
-
-  command = "echo This command will execute only once during apply"
-
+  provisioner "local-exec" {
+    command = "echo This command will execute only once during apply"
+  }
 
 }
 
