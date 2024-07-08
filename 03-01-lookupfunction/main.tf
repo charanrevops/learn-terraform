@@ -15,6 +15,5 @@ variable "fruits" {
 }
 output "the-fruit-name-is" {
   #value = lookup(var.fruits["name4"],"please say correct name")
-  value = lookup(var.fruits,"${var.fruits}","please say correct name")
+  value = lookup(var.fruits1,"${var.fruits}","please say correct name")
 }
-
