@@ -12,15 +12,15 @@ resource "null_resource" "ec2-severnames" {
 }
 
 variable "servernames" {
-  type = list(object({string}))
+  type = list(object({}))
   default = {
-    frontendserver == {
+    frontendserver = {
 
     }
-    backendserver == {
+    backendserver = {
 
     }
-    mysqlserver == {
+    mysqlserver = {
       instance_type = "t2.micro"
     }
   }
