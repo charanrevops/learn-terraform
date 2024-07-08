@@ -25,8 +25,8 @@ variable "servernames" {
       id    =  "t2.micro"
       },
     {
-      name  = "frontendserver"
-      id    =  "t2.micro"
+      name  = "backendserver"
+      id    =  "t3.micro"
     }
 
   ]
