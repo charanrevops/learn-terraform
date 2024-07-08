@@ -1,6 +1,6 @@
 resource "null_resource" "ec2-severnames" {
   #count         =  length(var.servernames)
-  #for_each      = var.servernames
+  for_each      = var.servernames
   triggers = {
     always_run = timestamp()
   }
@@ -23,6 +23,11 @@ variable "servernames" {
       instance_type = "t2.micro"
     }
   }
+}
+
+
+output "example" {
+  value =" ${this is example}"
 }
 
 # instance_type = try(each.value["instance_type"], null) == null? "t3.small" : each.value["instance_type"]
