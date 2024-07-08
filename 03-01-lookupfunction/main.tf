@@ -1,4 +1,4 @@
-variable "fruits" {
+variable "fruits1" {
   default ={
     name1 =10
     name2=20
