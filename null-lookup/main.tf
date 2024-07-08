@@ -1,9 +1,9 @@
 resource "null_resource" "ec2-severnames" {
   #count         =  length(var.servernames)
   #for_each      = toset(var.servernames)
-#  triggers = {
-#     names = each.value
-#   }
+ triggers = {
+     always_run = timestamp()
+  }
 
   provisioner "local-exec" {
     command = "echo This specific command will execute only once during apply"
