@@ -13,22 +13,30 @@ resource "null_resource" "ec2-servernames" {
 }
 
 variable "servernames" {
-  default = {
-    frontendserver = {
+  type    = list(object({
+    name  = string
+    id    = string
+  }))
 
-    }
-    backendserver = {
 
+  default = [
+    {
+      name  = "frontendserver"
+      id    =  "t2.micro"
+      },
+    {
+      name  = "frontendserver"
+      id    =  "t2.micro"
     }
-    mysqlserver = {
-      instance_type = "t2.micro"
-    }
-  }
+
+  ]
+
 }
 
 
+
 output "names-ids" {
-  value = [for i in null_resource.ec2-servernames : "the given servername is ${var.servernames["frontendserver"]}"]
+  value = [for i in null_resource.ec2-servernames : "the given servername is ${var.servernames}"]
 }
 
 
