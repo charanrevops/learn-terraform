@@ -17,7 +17,8 @@ variable "servernames" {
     id= string
   }))
   default = [
-    {name = "frontendserver"
+    {
+      name = "frontendserver"
       id  = ""
     },
     {
@@ -29,7 +30,6 @@ variable "servernames" {
       id = "t2.micro"
     }
 
-    }
   ]
 }
 
