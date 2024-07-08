@@ -3,7 +3,7 @@ resource "null_resource" "ec2-severnames" {
   #for_each      = var.servernames
 
   provisioner "local-exec" {
-    command = "echo This command will execute only once during apply"
+    command = "echo This specific command will execute only once during apply"
   }
 
 }
