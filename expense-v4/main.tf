@@ -1,4 +1,4 @@
-resource "aws_instance" "ec2-severnames" {
+resource "aws_instance" "ec2-servernames" {
   #count         =  length(var.servernames)
   for_each      = var.servernames
   ami           = "ami-041e2ea9402c46c32"
