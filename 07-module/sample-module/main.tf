@@ -1,7 +1,7 @@
 # this is the child module
 resource "null_resource" "example" {
   #count=length(var.fruits)
-  for_each = [for v in var.fruits: var.fruits]
+  for_each = var.fruits
 }
 
 variable  "fruits" {}
