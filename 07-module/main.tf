@@ -1,3 +1,4 @@
+# this is the root module
 module "river" {
   source = "./sample-module"
   fruits=var.fruits
