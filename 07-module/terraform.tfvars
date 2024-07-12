@@ -1,1 +1,1 @@
-default =["apple", "banana","orange","pineapple"]
+fruits =["apple", "banana","orange","pineapple"]
