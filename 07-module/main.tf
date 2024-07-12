@@ -1,14 +1,11 @@
-module "sample" {
+module "river" {
   source = "./sample-module"
   fruits=var.fruits
 
 }
 
-variable "fruits" {
-  default =["apple", "banana","orange","pineapple"]
-
-}
+variable "fruits" {}
 
 output "examplpe-test-is-here" {
-  value = module.sample.example-test
+  value = module.river.example-test
 }
