@@ -1,1 +1,7 @@
-fruits =["apple", "banana","orange","pineapple","sapota"]
+fruits ={
+  apple={}
+  banana={}
+  orange={}
+  sapota={}
+
+}
