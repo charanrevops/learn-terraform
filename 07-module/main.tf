@@ -5,6 +5,6 @@ module "sample" {
 }
 
 variable "fruits" {
-  default =["apple", "module"]
+  default =["apple", "banana","orange","pineapple"]
 
 }
