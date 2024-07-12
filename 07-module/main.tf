@@ -6,6 +6,6 @@ module "river" {
 
 variable "fruits" {}
 
-# output "example-test-is-here" {
-#   value = module.river.sub-example-test
-# }
+output "example-test-is-here" {
+  value = module.river.sub-example-test
+}
