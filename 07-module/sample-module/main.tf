@@ -6,5 +6,5 @@ resource "null_resource" "example" {
 variable  "fruits" {}
 
 output "example-test" {
-  value = "Hello World"
+  value = "Hello World here is "
 }
