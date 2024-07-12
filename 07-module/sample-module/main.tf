@@ -5,6 +5,6 @@ resource "null_resource" "example" {
 
 variable  "fruits" {}
 
-output "example-test" {
+output "sub-example-test" {
   value = "Hello World here is "
 }
