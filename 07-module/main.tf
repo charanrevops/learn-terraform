@@ -9,6 +9,6 @@ variable "fruits" {
 
 }
 
-output "examplpe-test" {
+output "examplpe-test-is-here" {
   value = module.sample.example-test
 }
