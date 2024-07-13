@@ -3,4 +3,5 @@ fruitnameprice = {
   banana = {}
   orange = {}
   sapota = {}
+  lemon  = {}
 }
