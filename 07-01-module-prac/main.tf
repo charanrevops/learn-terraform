@@ -1,5 +1,6 @@
 module "newtest" {
   source = "./newmodule"
+  fruitnameprice = var.fruitnameprice
 }
 
 variable "fruitnameprice" {}
