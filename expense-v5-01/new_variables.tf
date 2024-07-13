@@ -21,4 +21,5 @@ variable "vpc_security_group_ids" {
 }
 
 variable "name" {
+  default = "rohitsharma"
 }
