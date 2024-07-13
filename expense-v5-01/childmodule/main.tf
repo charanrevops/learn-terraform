@@ -5,6 +5,6 @@ resource "aws_instance" "ec2-servernames" {
   instance_type = var.instance_type
   vpc_security_group_ids = ["sg-076b871708f2b2227"]
   tags = {
-    Name = var.Name
+    Name = var.name
   }
 }
