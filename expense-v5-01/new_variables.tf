@@ -7,7 +7,7 @@ variable "servernames" {
 #       instance_type = "t2.micro"
     }
     mysqlserver = {
-      instance_type = "t2.micro"
+      #instance_type = "t2.micro"
     }
   }
 }
