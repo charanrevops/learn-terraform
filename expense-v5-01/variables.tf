@@ -1,7 +1,7 @@
 variable "servernames" {
   default = {
     frontendserver = {
-      instance_type = "t2.micro"
+
     }
     backendserver = {
       instance_type = "t2.micro"
