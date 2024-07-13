@@ -1,5 +1,6 @@
 resource "null_resource" "fruitcalled" {
-  for_each = var.fruitnameprice
+  #for_each = var.fruitnameprice
+  count=length(var.fruitnameprice)
 }
 
 variable "fruitnameprice" {}
