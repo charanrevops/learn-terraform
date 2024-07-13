@@ -1,4 +1,6 @@
 variable "instance_type" {}
-variable "name" {}
+variable "name" {
+  default = rohitsharma
+}
 variable "vpc_security_group_ids" {}
 variable "ami" {}
