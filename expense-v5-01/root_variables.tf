@@ -10,7 +10,7 @@
 #       #instance_type = "t2.micro"
 #     }
 #   }
-}
+# }
 
 # variable "ami" {
 #   default = "ami-041e2ea9402c46c32"

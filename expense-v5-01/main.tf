@@ -21,7 +21,7 @@ module "expense-module" {
 
 variable "servernames" {
   default = {
-    1-frontendserver = {
+    frontendserver-1 = {
 
     }
     backendserver = {
