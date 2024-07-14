@@ -19,6 +19,6 @@ data "aws_security_group" "ex-allow-all" {
     values = ["allow-all"]
   }
 }
-output "sd-id" {
+output "sg-id" {
   value =data.aws_security_group.ex-allow-all
 }
