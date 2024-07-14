@@ -1,12 +1,12 @@
 variable "servernames" {
   default = {
-    new-frontendserver-007 = {
+    frontend = {
 
     }
-    backendserver = {
+    backend = {
        instance_type = "t2.micro"
     }
-    mysqlserver = {
+    mysql = {
       instance_type = "t2.micro"
     }
   }
