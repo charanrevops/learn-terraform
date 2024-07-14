@@ -6,3 +6,5 @@ data "aws_route53_zone" "ex-main"{
 
 output "zone" {
   value = data.aws_route53_zone.ex-main
+
+}
