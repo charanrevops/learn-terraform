@@ -10,5 +10,3 @@ module "expense-module" {
 # DNS RECORDS
   zone_id                     = data.aws_route53_zone.ex-main.zone_id
 }
-
-
