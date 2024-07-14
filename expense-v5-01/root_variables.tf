@@ -1,6 +1,6 @@
 variable "servernames" {
   default = {
-    new-frontendserver-00 = {
+    new-frontendserver-99 = {
 
     }
     backendserver = {
