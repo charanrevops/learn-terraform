@@ -1,6 +1,6 @@
 variable "servernames" {
   default = {
-    new-frontendserver-99 = {
+    new-frontendserver-007 = {
 
     }
     backendserver = {
@@ -18,4 +18,10 @@ variable "ami" {
 
 variable "vpc_security_group_ids" {
   default = ["sg-076b871708f2b2227"]
+}
+
+#DNS records
+
+variable "zone_id" {
+  default = "Z07982232LM1PBSHA15UZ"
 }
