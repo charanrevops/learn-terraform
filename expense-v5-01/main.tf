@@ -8,5 +8,5 @@ module "expense-module" {
 
 
 # DNS RECORDS
-  zone_id                     = var.zone_id
+  zone_id                     = data.aws_route53_zone.ex-main.zone_id
 }
