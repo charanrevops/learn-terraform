@@ -1,5 +1,5 @@
 module "expense-module" {
-  source                      = "./module/childmodule"
+  source                      = "./childmodule"
   ami                         = data.aws_ami.ex-ami.image_id
   instance_type               = try(each.value["instance_type"], null) == null? "t3.small" : each.value["instance_type"]
   name                        = each.key
