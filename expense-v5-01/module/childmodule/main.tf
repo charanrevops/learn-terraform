@@ -9,12 +9,12 @@ resource "aws_instance" "ec2-servernames" {
 }
 
 
-
+#DNS records
 
 resource "aws_route53_record" "exrecord" {
   zone_id = var.zone_id
   name    = "${var.name}-dev.charanrdevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.node.private_ip]
+  records = [aws_instance.ec2-servernames.private_ip]
 }
