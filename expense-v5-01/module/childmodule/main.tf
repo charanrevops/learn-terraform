@@ -6,6 +6,15 @@ resource "aws_instance" "ec2-servernames" {
   tags = {
     Name = var.name
   }
+
+
+
+  provisioner "local-exec" {
+    command = "sleep 120; cd /home/ec2-user/expense-ansible; ansible-playbook -i ${self.private_ip}, -e ansible_user=ec2-user -e ansible_password=DevOps321 -e role_name=${var.name} -e env=dev expense.yml"
+
+  }
+
+
 }
 
 
