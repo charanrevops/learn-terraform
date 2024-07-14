@@ -19,7 +19,3 @@ variable "ami" {
 variable "vpc_security_group_ids" {
   default = ["sg-076b871708f2b2227"]
 }
-
-# variable "name" {
-#   default = "rohitsharma"
-# }
